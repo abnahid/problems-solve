@@ -29,4 +29,34 @@ function findMax(nums) {
     return max;
 }
 
+// 4.  Check for Palindrome
 
+function isPalindrome(s) {
+    const clean = s.toLowerCase().replace(/[^a-z0-9]/g, '');
+    return clean === clean.split('').reverse().join('');
+}
+
+// 5.  Sum of Array Elements
+
+function sumArray(nums) {
+    let sum = 0;
+
+    for (let num of nums) {
+        sum = sum + num;
+    }
+
+    return sum;
+}
+
+// 6. Count Vowels
+
+function countVowels(s) {
+    const vowels = new Set(['a', 'e', 'i', 'o', 'u']);
+    let count = 0;
+
+    for (let char of s.toLowerCase()) {
+        if (vowels.has(char)) count++;
+    }
+
+    return count;
+}
