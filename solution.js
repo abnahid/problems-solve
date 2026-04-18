@@ -60,3 +60,47 @@ function countVowels(s) {
 
     return count;
 }
+
+// 7.  Factorial Calculation
+
+function factorial(n) {
+    let result = 1;
+
+    for (let i = 2; i <= n; i++) {
+        result = result * i;
+    }
+
+    return result;
+}
+
+// 8.  Even or Odd List
+
+function getEven(nums) {
+    return nums.filter(n => n % 2 === 0);
+}
+
+// 9. Fibonacci Sequence
+
+function fibonacci(n) {
+    if (n === 1) return [0];
+
+    const result = [0, 1];
+
+    for (let i = 2; i < n; i++) {
+        result.push(result[i - 1] + result[i - 2]);
+    }
+
+    return result;
+}
+
+// 10.  Find the Minimum in an Array
+
+function findMin(nums) {
+    let min = nums[0];
+
+    for (let num of nums) {
+        if (num < min) min = num;
+    }
+
+    return min;
+}
